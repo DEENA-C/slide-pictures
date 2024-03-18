@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+ <head>
+ <title>slide pictures</title>
+    <meta charset="utf-8">
+	  </head>
+	  <body>
+	    <script>
+		pics=["dhoni.jpg","house.jpg","virat.jpg","car.jpg"];
+		i=0;
+		  function prev()
+		  {
+		  dna=document.getElementById("one");
+		  dpi=document.getElementById("prevbtn");
+		  check=document.getElementById("nxtbtn");
+		  if(i!=0)
+		  {
+	i--;
+		  dna.src=pics[i];
+		  }
+		  else
+		  { 
+		  
+		  dpi.disabled=true;
+		  }
+		  check.disabled=false;
+	    }
+		
+		function next()
+		{
+	      a=document.getElementById("one");
+		  b=document.getElementById("prevbtn");
+		  c=document.getElementById("nxtbtn");
+		  if(i!=pics.length-1)
+		  {
+		  i++;
+		  a.src=pics[i];
+		  }
+		  else
+		  {
+		  c.disabled=true;
+		  }
+		  b.disabled=false;
+		  
+		}
+		</script>
+		   <img src="teddy.jpg" height="300px" width="500px"style="border:5px solid orange;" id="one"/>
+		   <br>
+		   <input type ="button" value="prev" onclick="prev()" id="prevbtn"/>
+		   <input type ="button" value="next" onclick="next()" id="nxtbtn"/>
+	 </body>
+	</html>
+
+		
+		  
+
